@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
+import { ContactModal } from "@/components/ContactModal"
 
 export function Hero() {
   return (
@@ -21,21 +22,23 @@ export function Hero() {
             接受咨询预约中
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
-            用 <span className="text-gradient">AI 与产品思维</span> <br />
-            重构个体生产力
+            用 <span className="text-gradient">AI 与运营思维</span> <br />
+            唤醒自身创造力
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            你好，我是 Wangdefou。连接技术创新与用户需求的桥梁。<br />
-            AI 产品经理 | 独立开发者 | 内容创作者
+            你好，我是 Wangdefou，一个文科生，0编程基础。
+            <br />正在用AI解决构建各种工具，解决实际问题。<br />
           </p>
           <div className="flex flex-col sm:flex-row gap-6">
             <Button size="lg" className="group bg-primary hover:bg-primary/90 text-black font-semibold border-0 text-base px-8 h-12" onClick={() => document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'})}>
               查看我的作品
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="glass hover:bg-white/10 text-base px-8 h-12" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-              取得联系
-            </Button>
+            <ContactModal>
+              <Button size="lg" variant="outline" className="glass hover:bg-white/10 text-base px-8 h-12">
+                取得联系
+              </Button>
+            </ContactModal>
           </div>
         </motion.div>
         

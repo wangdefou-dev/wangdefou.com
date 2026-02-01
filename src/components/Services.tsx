@@ -3,26 +3,31 @@ import { CheckCircle2, Lightbulb, Rocket, BarChart3 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
+import { ContactModal } from "@/components/ContactModal"
 
 const services = [
   {
-    title: "AI 产品咨询",
-    description: "将您的创意转化为 AI 驱动的产品。从可行性分析到路线图规划。",
+    title: "X 爆款挖掘机工具",
+    description: "帮助你在 X 平台上快速锁定潜在爆款内容。",
     icon: <Lightbulb className="h-10 w-10" />,
-    features: ["市场调研", "技术栈选型", "MVP 策略"],
+    features: ["源代码授权", "详细部署教程", "可Demo试用"],
+    price: "99元/份",
   },
   {
-    title: "MVP 开发",
-    description: "快速构建并发布最小可行性产品，验证市场契合度。",
-    icon: <Rocket className="h-10 w-10" />,
-    features: ["React/Next.js 开发", "数据库设计", "自动化部署"],
-  },
-  {
-    title: "增长策略",
-    description: "数据驱动的增长策略，扩大用户群并提升活跃度。",
+    title: "业务咨询",
+    description: "一对一深入咨询，解决您在 AI 落地过程中的具体痛点。",
     icon: <BarChart3 className="h-10 w-10" />,
-    features: ["社交媒体增长", "内容策略", "数据分析体系搭建"],
+    features: ["痛点深入分析", "可行性建议", "落地路径规划"],
+    price: "300元/小时",
   },
+  {
+    title: "企业 AI 工具培训",
+    description: "帮助企业团队快速上手 AI 工具，提升整体工作效率。",
+    icon: <Rocket className="h-10 w-10" />,
+    features: ["定制化培训方案", "团队协作流优化", "现场实操指导"],
+    price: "2000元起/场",
+  },
+
 ]
 
 export function Services() {
@@ -30,9 +35,9 @@ export function Services() {
     <Section id="services" className="relative">
       <div className="flex flex-col gap-12 relative z-10 max-w-4xl mx-auto">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">服务内容</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">我能提供的服务</h2>
           <p className="text-muted-foreground">
-            我如何帮助您构建与增长。
+            不讲空话，有问必答
           </p>
         </div>
 
@@ -66,9 +71,11 @@ export function Services() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full glass hover:bg-primary hover:text-black border-primary/30 transition-colors font-medium group-hover:bg-primary/10 group-hover:border-primary/50" variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-                    了解更多
-                  </Button>
+                  <ContactModal className="w-full">
+                    <Button className="w-full glass hover:bg-primary hover:text-black border-primary/30 transition-colors font-medium group-hover:bg-primary/10 group-hover:border-primary/50" variant="outline">
+                      {service.price}
+                    </Button>
+                  </ContactModal>
                 </CardFooter>
               </Card>
             </motion.div>

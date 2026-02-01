@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { ContactModal } from "@/components/ContactModal"
 
 const navItems = [
   { name: "关于", href: "#about" },
@@ -45,14 +46,28 @@ export function Header() {
         <a 
           href="#" 
           onClick={(e) => scrollToSection(e, "#hero")}
-          className="text-2xl font-bold tracking-tighter"
+          className="text-2xl font-bold tracking-tighter flex items-center gap-3"
         >
+          <img 
+            src="https://static.gridea.dev/b5116d45-87d1-4dbf-9ebb-455bf29b865f/Bb7P8wA8w.png" 
+            alt="Wangdefou" 
+            className="w-8 h-8 rounded-full border border-primary/50"
+          />
           Wangdefou
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
+            item.name === "联系" ? (
+              <ContactModal key={item.name}>
+                <button
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {item.name}
+                </button>
+              </ContactModal>
+            ) : (
             <a
               key={item.name}
               href={item.href}
@@ -61,6 +76,7 @@ export function Header() {
             >
               {item.name}
             </a>
+            )
           ))}
           <Button onClick={() => window.open("https://x.com/wangdefou", "_blank")} className="bg-primary hover:bg-primary/90">
             关注推特
@@ -88,6 +104,16 @@ export function Header() {
           >
             <nav className="flex flex-col p-4 gap-4">
               {navItems.map((item) => (
+                item.name === "联系" ? (
+                  <ContactModal key={item.name}>
+                    <button
+                      className="text-lg font-medium py-2 border-b border-white/10 last:border-0 w-full text-left"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </button>
+                  </ContactModal>
+                ) : (
                 <a
                   key={item.name}
                   href={item.href}
@@ -96,6 +122,7 @@ export function Header() {
                 >
                   {item.name}
                 </a>
+                )
               ))}
               <Button className="w-full mt-2" onClick={() => window.open("https://x.com/wangdefou", "_blank")}>
                 关注推特

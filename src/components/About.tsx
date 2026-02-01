@@ -1,19 +1,17 @@
 import { motion } from "framer-motion"
-import { Code, Cpu, Globe, TrendingUp, Users, Zap } from "lucide-react"
+import { Cpu, TrendingUp, Users } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 
 const tags = [
-  "INTP", "AI 产品经理", "独立开发者", "全栈开发", "增长黑客", "内容创作者"
+  "ENTJ", "AI深度使用者", "AI小应用开发者", "市场营销", "内容创作者", "副业探索"
 ]
 
 const skills = [
-  { name: "产品策略", icon: <TrendingUp className="h-6 w-6" /> },
-  { name: "AI 整合", icon: <Cpu className="h-6 w-6" /> },
-  { name: "Web 开发", icon: <Code className="h-6 w-6" /> },
-  { name: "社区增长", icon: <Users className="h-6 w-6" /> },
-  { name: "快速原型", icon: <Zap className="h-6 w-6" /> },
-  { name: "全球市场", icon: <Globe className="h-6 w-6" /> },
+  { name: "AI 实战", icon: <TrendingUp className="h-6 w-6" /> },
+  { name: "AI 工具开发", icon: <Cpu className="h-6 w-6" /> },
+  { name: "新媒体运营", icon: <Users className="h-6 w-6" /> },
+
 ]
 
 export function About() {
@@ -21,10 +19,20 @@ export function About() {
     <Section id="about" className="relative">
       <div className="flex flex-col gap-12 relative z-10 max-w-4xl mx-auto">
         <div className="text-center max-w-2xl mx-auto">
+          <div className="mb-6 relative inline-block">
+             <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
+             <img 
+               src="https://static.gridea.dev/b5116d45-87d1-4dbf-9ebb-455bf29b865f/Bb7P8wA8w.png" 
+               alt="Wangdefou" 
+               className="relative w-32 h-32 rounded-full border-2 border-primary/50 shadow-2xl mx-auto object-cover"
+             />
+          </div>
           <h2 className="text-3xl font-bold tracking-tight mb-4">关于我</h2>
           <p className="text-muted-foreground">
-            我从传统行业转型，仅用一个月成为 AI 产品经理。
-            现在，我帮助个人和企业利用 AI 重构生产力，构建可扩展的产品。
+            新闻学专业背景，从大二实习就开始干运营，到现在十多年了。<br />
+            0代码基础，但现在我借助AI构建了自己的网站、工具，解决了很多实际问题。<br />
+            我发现，很多文科生在面对AI的时候很迷茫，不知所措，跟当初的我一样。<br />
+            所以我决定把这一路的经验分享出来，帮助更多的文科生。
           </p>
         </div>
 
