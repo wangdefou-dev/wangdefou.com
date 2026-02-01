@@ -10,8 +10,8 @@ const projects = [
     description: "基于 AI 的 X (Twitter) 内容监控工具，帮助博主跟踪潜在爆款内容。",
     stats: "3天自然增长 50+",
     tags: ["X 运营", "AI"],
-    link: "#https://x.wangdefou.com/",
-    github: "#",
+    link: "https://x.wangdefou.com/",
+    github: "https://github.com/wangdefou-dev",
     className: "md:col-span-2",
   },
   {
@@ -45,8 +45,8 @@ const projects = [
 
 export function Projects() {
   return (
-    <Section id="projects" className="relative">
-      <div className="flex flex-col gap-12 relative z-10 max-w-4xl mx-auto">
+    <Section id="projects" className="relative min-h-screen flex items-center justify-center snap-start">
+      <div className="flex flex-col gap-8 relative z-10 max-w-4xl mx-auto w-full py-12 md:py-20">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold tracking-tight mb-4">精选作品</h2>
           <p className="text-muted-foreground">

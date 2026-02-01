@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { CheckCircle2, Lightbulb, Rocket, BarChart3 } from "lucide-react"
+import { CheckCircle2, Lightbulb, Rocket, BarChart3, Sparkles, Github, Twitter } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
@@ -27,21 +27,27 @@ const services = [
     features: ["定制化培训方案", "团队协作流优化", "现场实操指导"],
     price: "2000元起/场",
   },
-
+  {
+    title: "文科生 AI 学习社群",
+    description: "我踩过的坑，我的实践经验，可以让你少走很多弯路。",
+    icon: <Sparkles className="h-10 w-10" />,
+    features: ["知识库共享", "专属交流群", "定期直播分享"],
+    price: "299元/人 (早鸟价)",
+  },
 ]
 
 export function Services() {
   return (
-    <Section id="services" className="relative">
-      <div className="flex flex-col gap-12 relative z-10 max-w-4xl mx-auto">
+    <Section id="services" className="relative min-h-screen flex items-center justify-center snap-start">
+      <div className="flex flex-col gap-8 relative z-10 max-w-4xl mx-auto w-full py-12 md:py-20">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">我能提供的服务</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-2">我能提供的服务</h2>
           <p className="text-muted-foreground">
             不讲空话，有问必答
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -81,6 +87,28 @@ export function Services() {
             </motion.div>
           ))}
         </div>
+      {/* Footer Content */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6 }}
+        className="flex flex-col items-center gap-4 mt-8 pt-6 border-t border-white/10"
+      >
+        <div className="flex gap-4">
+          <a href="https://x.com/wangdefou" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <Twitter className="h-5 w-5" />
+            <span className="sr-only">Twitter</span>
+          </a>
+          <a href="https://github.com/wangdefou-dev" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <Github className="h-5 w-5" />
+            <span className="sr-only">GitHub</span>
+          </a>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Wangdefou 保留所有权利
+        </div>
+      </motion.div>
       </div>
     </Section>
   )

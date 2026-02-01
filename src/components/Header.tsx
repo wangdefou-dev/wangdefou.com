@@ -9,7 +9,7 @@ const navItems = [
   { name: "关于", href: "#about" },
   { name: "作品", href: "#projects" },
   { name: "服务", href: "#services" },
-  { name: "联系", href: "#contact" },
+  { name: "联系", href: "#services" },
 ]
 
 export function Header() {

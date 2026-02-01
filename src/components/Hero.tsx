@@ -6,7 +6,7 @@ import { ContactModal } from "@/components/ContactModal"
 
 export function Hero() {
   return (
-    <Section id="hero" className="min-h-screen flex items-center justify-center pt-32 md:pt-20 overflow-hidden relative">
+    <Section id="hero" className="min-h-screen flex items-center justify-center pt-0 overflow-hidden relative snap-start">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -z-10" />
 

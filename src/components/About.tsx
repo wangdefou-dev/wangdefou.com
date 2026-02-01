@@ -16,15 +16,15 @@ const skills = [
 
 export function About() {
   return (
-    <Section id="about" className="relative">
-      <div className="flex flex-col gap-12 relative z-10 max-w-4xl mx-auto">
+    <Section id="about" className="relative min-h-screen flex items-center justify-center snap-start">
+      <div className="flex flex-col gap-8 relative z-10 max-w-4xl mx-auto w-full py-12 md:py-20">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="mb-6 relative inline-block">
+          <div className="mb-4 relative inline-block">
              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse" />
              <img 
                src="https://static.gridea.dev/b5116d45-87d1-4dbf-9ebb-455bf29b865f/Bb7P8wA8w.png" 
                alt="Wangdefou" 
-               className="relative w-32 h-32 rounded-full border-2 border-primary/50 shadow-2xl mx-auto object-cover"
+               className="relative w-28 h-28 rounded-full border-2 border-primary/50 shadow-2xl mx-auto object-cover"
              />
           </div>
           <h2 className="text-3xl font-bold tracking-tight mb-4">关于我</h2>
