@@ -30,7 +30,7 @@ export function Footer() {
           </div>
 
           <div className="text-sm text-muted-foreground mt-8">
-            © {new Date().getFullYear()} Wangdefou. 保留所有权利.
+            © {new Date().getFullYear()} Wangdefou 保留所有权利
           </div>
         </div>
       </Section>

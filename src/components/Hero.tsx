@@ -18,7 +18,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium mb-8 text-primary backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-            接受新项目预约中
+            接受咨询预约中
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
             用 <span className="text-gradient">AI 与产品思维</span> <br />

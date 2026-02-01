@@ -47,7 +47,7 @@ export function Header() {
           onClick={(e) => scrollToSection(e, "#hero")}
           className="text-2xl font-bold tracking-tighter"
         >
-          Wangdefou<span className="text-primary">.</span>
+          Wangdefou
         </a>
 
         {/* Desktop Nav */}
