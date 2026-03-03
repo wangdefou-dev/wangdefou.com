@@ -32,7 +32,7 @@ const services = [
     description: "我踩过的坑，我的实践经验，可以让你少走很多弯路。",
     icon: <Sparkles className="h-10 w-10" />,
     features: ["知识库共享", "专属交流群", "定期直播分享"],
-    price: "299元/人 (早鸟价)",
+    price: "499元/年",
   },
 ]
 
