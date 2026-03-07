@@ -18,14 +18,14 @@ const services = [
     description: "一对一深入咨询，解决您在 AI 落地过程中的具体痛点。",
     icon: <BarChart3 className="h-10 w-10" />,
     features: ["痛点深入分析", "可行性建议", "落地路径规划"],
-    price: "300元/小时",
+    price: "500元/小时",
   },
   {
     title: "企业 AI 工具培训",
     description: "帮助企业团队快速上手 AI 工具，提升整体工作效率。",
     icon: <Rocket className="h-10 w-10" />,
     features: ["定制化培训方案", "团队协作流优化", "现场实操指导"],
-    price: "2000元起/场",
+    price: "3000元起/场",
   },
   {
     title: "文科生 AI 学习社群",
